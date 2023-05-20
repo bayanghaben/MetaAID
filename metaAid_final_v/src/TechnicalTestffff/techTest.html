@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Technology test</title>
+    <link rel="stylesheet" href="./techTest.css" />
+    <link rel="stylesheet" href="../header and footer/style.css" />
+  
+  </head>
+  <body>
+    <!-- //header -->
+    <div class="header">
+      <div class="logo">
+        <img src="../header and footer/logo.png" alt="logo" />
+      </div>
+      <div class="rightSide">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <h2 class="user_name hidden"></h2>
+        <input class="logout button" type="submit" value="Log Out" />
+      </div>
+    </div>
+    <!-- header end -->
+
+    <div class="quiz">
+      <div class="test">
+        <h4 id="question">What is the primary purpose of HTML?</h4>
+        <span>
+          <input
+            type="radio"
+            id="A"
+            name="option"
+            class="answer"
+            value="optionA"
+          />
+          <label for="option-one" class="option" id="option-one">one</label>
+        </span>
+
+        <span>
+          <input
+            type="radio"
+            id="B"
+            name="option"
+            class="answer"
+            value="optionB"
+          />
+          <label for="option-two" class="option" id="option-two">two</label>
+        </span>
+
+        <span>
+          <input
+            type="radio"
+            id="C"
+            name="option"
+            class="answer"
+            value="optionC"
+          />
+          <label for="option-three" class="option" id="option-three"
+            >three</label
+          >
+        </span>
+
+        <span>
+          <input
+            type="radio"
+            id="D"
+            name="option"
+            class="answer"
+            value="optionD"
+          />
+          <label for="option-four" class="option" id="option-four">three</label>
+        </span>
+        <div class="popup">
+          <button type="submit" id="btn">Next Question</button>
+          <div class="modal-box">
+            <i class="fa-regular fa-circle-check"></i>
+
+            <h3 class="popupScore"></h3>
+            <button class="close-btn">Ok</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="timer">
+        <h2 class="min">10:</h2>
+        <h2 class="sec">00</h2>
+      </div>
+
+      <div class="img-box"><img src="./technology.png" alt="" /></div>
+    </div>
+
+    <!--footer-->
+    <footer>
+      <div class="footer">
+        <div class="bottomfooter">
+          <i
+            class="fa-brands fa-square-twitter fa-xl"
+            style="color: #05c1ff"
+          ></i>
+          <i class="fa-brands fa-youtube fa-xl" style="color: #db0016"></i>
+          <i class="fa-brands fa-linkedin fa-xl" style="color: #0d52c9"></i>
+          <i class="fa-brands fa-instagram fa-xl" style="color: #7b1e73"></i>
+          <i class="fa-brands fa-facebook fa-xl" style="color: #005eff"></i>
+        </div>
+        <div class="upperfooter">
+          <p>
+            <i class="fa-sharp fa-solid fa-copyright"></i> 2023 MetaAid | All
+            Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--end of footer -->
+    <script src="./techTest.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>English Test</title>
+    <link rel="stylesheet" href="../header and footer/style.css" />
+    <link rel="stylesheet" href="engTest.css" />
+  </head>
+  <body>
+    <!-- //header -->
+    <div class="header">
+      <div class="logo">
+        <img src="../header and footer/logo.png" alt="logo" />
+      </div>
+      <div class="rightSide">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <h2 class="user_name hidden"></h2>
+        <input class="logout button" type="submit" value="Log Out" />
+      </div>
+    </div>
+    <!-- header end -->
+
+    <!--english test section-->
+    <section>
+      <div class="timer">
+        <span class="minHolder">20:</span>
+        <span class="secHolder">00</span>
+      </div>
+      <div class="quiz-container">
+        <div>
+          <h2 class="question">
+            Which of the following words is a synonym for 'happy'?
+          </h2>
+
+          <div class="item">
+            <input type="radio" class="option" name="answer" id="A" />
+            <label class="label" for="A"> joyful </label>
+          </div>
+          <div class="item">
+            <input type="radio" class="option" name="answer" id="B" />
+            <label class="label" for="B"> Sad </label>
+          </div>
+          <div class="item">
+            <input type="radio" class="option" name="answer" id="C" />
+            <label class="label" for="C"> Angry </label>
+          </div>
+          <div class="item">
+            <input type="radio" class="option" name="answer" id="D" />
+            <label class="label" for="D"> Tired </label>
+          </div>
+          <div class="popup">
+            <button id="nextBtn">NEXT QUESTION &rarr;</button>
+
+            <div class="modal-box">
+              <i id="icon" class="fa-regular fa-circle-check"></i>
+
+              <h3 class="popupScore"></h3>
+              <button class="closeBtn">Ok</button>
+            </div>
+          </div>
+        </div>
+
+        <img class="img" src="./32184-removebg-preview.png" alt="" />
+      </div>
+    </section>
+    <!-- end of english test section-->
+    <!--footer-->
+    <footer>
+      <div class="footer">
+        <div class="bottomfooter">
+          <i
+            class="fa-brands fa-square-twitter fa-xl"
+            style="color: #05c1ff"
+          ></i>
+          <i class="fa-brands fa-youtube fa-xl" style="color: #db0016"></i>
+          <i class="fa-brands fa-linkedin fa-xl" style="color: #0d52c9"></i>
+          <i class="fa-brands fa-instagram fa-xl" style="color: #7b1e73"></i>
+          <i class="fa-brands fa-facebook fa-xl" style="color: #005eff"></i>
+        </div>
+        <div class="upperfooter">
+          <p>
+            <i class="fa-sharp fa-solid fa-copyright"></i> 2023 MetaAid | All
+            Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--end of footer -->
+    <script type="module" src="engTest.js"></script>
+  </body>
+</html>

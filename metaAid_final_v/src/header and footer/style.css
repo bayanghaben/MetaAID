@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --yellow: #fcc822;
+  --black: #333333;
+  --font-poppin: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --wihte: #ffffff;
+}
+body {
+  overflow-x: hidden;
+}
+.header {
+  background-color: #ebe3b235;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  width: 100vw;
+}
+
+.rightSide {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.user_name {
+  font-family: var(--font-poppin);
+  text-transform: capitalize;
+
+  font-size: 1.8rem;
+  color: var(--black);
+}
+.fa-user {
+  color: var(--yellow);
+  font-size: 2rem;
+}
+.hidden {
+  display: none;
+}
+.footer {
+  background-color: #ebe3b235;
+
+  width: 100vw;
+  height: 120px;
+  display: flex;
+
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem;
+
+  bottom: 0;
+
+  flex-direction: column;
+}
+
+.bottomfooter {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.fa-sharp {
+  color: var(--yellow);
+}
+.fa-brands {
+  font-size: 2.5rem;
+}
+.button {
+  background-color: #ffd700;
+
+  color: white;
+
+  width: 10rem;
+  padding: 1rem 3rem;
+
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.button:hover {
+  background-color: darkgoldenrod;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .header {
+    width: 100vw;
+  } 
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    width: 100vw;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .header {
+    width: 100vw;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+  .button {
+    width: 8rem;
+  }
+  .user_name {
+    font-size: 0.8rem;
+  }
+}

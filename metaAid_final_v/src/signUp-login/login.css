@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --yellow: #fcc822;
+  --black: #333333;
+  --font-poppin: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --wihte: #ffffff;
+}
+.container {
+  width: 100vw;
+  display: flex;
+}
+body {
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+.yello-text {
+  color: rgb(252, 200, 34);
+}
+.form {
+  width: 50vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.name-app {
+  width: 50vw;
+  text-align: center;
+
+  /* border: 1px solid black; */
+}
+.name-appli {
+  text-align: center;
+  font-size: 30px;
+  width: 50vw;
+  height: 10vh;
+  /* border: 1px solid black; */
+  padding-top: 80px;
+}
+.parts-form {
+  width: 50vw;
+
+  color: rgb(252, 200, 34);
+  /* border: 1px solid black; */
+
+  text-align: center;
+  font-family: var(--font-family);
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+form {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.parts-form input {
+  width: 400px;
+  height: 27px;
+  border: 1px solid #c1bbbb;
+  outline: none;
+  border-inline-start-width: 3px;
+  border-inline-start-color: var(--yellow);
+  writing-mode: horizontal-tb;
+  margin-bottom: 0.5rem;
+}
+.input-label {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+}
+form label {
+  width: 400px;
+  font-size: 1rem;
+  color: var(--black);
+  font-family: var(--font-roboto);
+  text-transform: capitalize;
+  text-align: left;
+}
+.form-link {
+  display: flex;
+  justify-content: space-evenly;
+
+  /* border: 1px solid black; */
+  width: 50vw;
+  height: 10vh;
+  padding-top: 40px;
+}
+.Remberme {
+  display: flex;
+}
+.btn-sign {
+  width: 50vw;
+  height: 7vh;
+  /* border: 1px solid black; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/* .btn-signlog{
+width:50vw;
+height:20vh;
+border: 1px solid black;
+padding-top: 30px;
+
+   } */
+.button {
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+.button1 {
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(95.34deg, #fcc822 0%, #ffcd2e 100%);
+  box-shadow: 0px 10.4502px 23.2228px -6.96683px #fbe18f;
+  border: none;
+  color: var(--wihte);
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-top: .5rem;
+  padding: .5rem;
+}
+.button2 {
+  width: 100px;
+  height: 50px;
+  background: linear-gradient(95.34deg, #fcc822 0%, #ffcd2e 100%);
+  box-shadow: 0px 10.4502px 23.2228px -6.96683px #fbe18f;
+  border: none;
+  color: var(--wihte);
+  text-transform: capitalize;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.flex-face {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 70px;
+}
+.image-signup {
+  /* border: 1px solid black; */
+  /* border-radius: 4px;  */
+  /* padding: 5px; */
+  width: 100vw;
+  height: 40vh;
+  margin-top: 5rem;
+  /* margin-left: 500px;   */
+}
+.image {
+  width: 50vw;
+  height: 80vh;
+}
+
+.error {
+  color: red;
+}
+.sign-up {
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: var(--yellow);
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 100vw;
+    padding: 0rem 2rem;
+  }
+  .image {
+    width: 100vw;
+    height: 35vh;
+    object-fit: contain;
+  }
+  .form {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 20vh;
+  }
+  .input-label input {
+    width: 250px;
+  }
+  .input-label label {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    width: 100vw;
+    padding: 0rem 2rem;
+  }
+  .image {
+    width: 100vw;
+    height: 35vh;
+    object-fit: contain;
+  }
+  .image img {
+    width: 100vw;
+  }
+  .form {
+    width: 100vw;
+    height: unset;
+    margin-bottom: 5rem;
+  }
+  .input-label input {
+    width: 250px;
+  }
+  .input-label label {
+    width: 250px;
+  }
+}

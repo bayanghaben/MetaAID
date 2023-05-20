@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="landing.css" />
+    <link rel="stylesheet" href="./header and footer/style.css">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <title>MetaAid</title>
+  </head>
+  <body>
+   <!-- //header -->
+ <div class="header">
+  <div class="logo">
+    <img src="./header and footer/logo.png" alt="logo" />
+  </div>
+  <div class="rightSide">
+    <i class="fa-solid fa-user fa-xl"></i>
+    <h2 class="user_name hidden"></h2>
+    <input class="logout button" type="submit" value="Log Out" />
+  </div>
+</div>
+<!-- header end -->
+    <div class="landing__header flex">
+      <div class="landing_header_text flex">
+        <h1 class="landing__header_h1">
+          Discover <br />thousands of <br />Master's degrees
+        </h1>
+        <p class="landing_header_p">
+          We help you make your studying dreams <br />
+          come true.
+        </p>
+        <button class="start_application_btn">
+          <!--to edit the link id-->
+          <a href="#section_form_tests-container"> Start Application</a>
+        </button>
+      </div>
+      <div class="landing_header_photo">
+        <img
+          class="landing_header_photo_img"
+          src="https://img.freepik.com/free-vector/focused-tiny-people-reading-books_74855-5836.jpg?w=996&t=st=1684186309~exp=1684186909~hmac=82e46e1eccc52d53ffb0fbc42078e220299d7ac5cbd127709762fa3515b544b0"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- Form & Exam -->
+    <!-- Form & Exam -->
+    <div class="section_form_tests-container" id="section_form_tests-container">
+      <div class="note--wrapper">
+        <!-- <a href="form/form.html">aaaa</a> -->
+        <p>
+          *You need to fill out your information and complete both the technical
+          and English tests before submitting your application.
+        </p>
+      </div>
+      <!--Progress bar-->
+       <div id="progress-bar-container">
+        <ul class="progressbar">
+         <li class="step-1 bullets"><span class="span"></span></li>
+          <li class="step-2 bullets"><span></span></li>
+          <li class="step-3 bullets"><span></span></li>
+        </ul>
+      </div> 
+
+      <div class="form--tests--container flex" id="form--tests--container">
+      <div class="instuctions">
+        <h2 class="instuctions-title">Instructions:</h2>
+        <ol>
+          <li><span class="instuctions-item">English test: should complete a 15 questions within 20 minutes.</span></li>
+          <li><span class="instuctions-item">Technical test: should complete a 10 questions within 10 minutes.</span></li>
+          <li><span class="instuctions-item">You can take Each exam once.</span></li>
+          <li><span class="instuctions-item">You can fill the form once.</span></li>
+          <li><span class="instuctions-item">Read the questions carefully before you answer.</span>
+
+          </li>
+        </ol>
+      </div>
+      <div class="box--container flex">
+        <button class="applicant--form box">
+            Applicant<br />
+            informations</a
+          >
+        </button>
+        <button class="english--test box">
+          
+            English test</a
+          >
+        </button>
+        <button class="technical--test box">
+            Technical test
+        </button>
+      </div>
+      <button class="submit__btn">Submit  </button>
+    </div>
+</div>
+    <!--footer-->
+
+
+    <footer>
+      <div class="footer">
+       
+        <div class="bottomfooter">
+
+          <i
+          class="fa-brands fa-square-twitter fa-xl"
+          style="color: #05c1ff"
+          
+        ></i>
+        <i class="fa-brands fa-youtube fa-xl" style="color: #db0016"></i>
+        <i class="fa-brands fa-linkedin fa-xl" style="color: #0d52c9"></i>
+        <i class="fa-brands fa-instagram fa-xl" style="color: #7b1e73"></i>
+        <i class="fa-brands fa-facebook fa-xl" style="color: #005eff"></i>
+        </div>
+        <div class="upperfooter">
+          <p> <i class="fa-sharp fa-solid fa-copyright" ></i>  2023 MetaAid | All Rights Reserved</p>
+         
+        </div>
+      </div>
+      
+    </footer>
+
+
+
+
+
+    <!--end of foorter-->
+    <script src="landing.js"></script>
+  </body>
+</html>

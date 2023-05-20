@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../header and footer/style.css" />
+    <link rel="stylesheet" href="result.css" />
+    <title>Result</title>
+  </head>
+  <body>
+    <!-- //header -->
+    <div class="header">
+      <div class="logo">
+        <img src="../header and footer/logo.png" alt="logo" />
+      </div>
+      <div class="rightSide">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <h2 class="user_name hidden"></h2>
+        <input class="logout button" type="submit" value="Log Out" />
+      </div>
+    </div>
+    <!-- header end -->
+
+    <!--result section-->
+
+    <section class="result-section">
+      <div class="result-con">
+        <div class="title-svg">
+          <h1 class="result-title">Your application has been Submitted</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            class="bi bi-check-circle-fill"
+            viewBox="0 0 16 16"
+            strok="20"
+          >
+            <path
+              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+            />
+          </svg>
+        </div>
+        <p id="fisrt-name">First Name :</p>
+        <p id="last-name">Last Name :</p>
+        <p id="education-level">Educational level : Bachelor's Degree</p>
+        <p id="major">Majoring in :</p>
+        <p id="gpa">Graduate GPA :</p>
+        <p id="address">Address :</p>
+        <p id="phone">Phone :</p>
+        <p id="englishScore">
+          <span class="score">score in the english test : </span>
+        </p>
+        <p id="techScore">
+          <span class="score">Your score in the technical test : </span>
+        </p>
+      </div>
+
+      <div class="img-result"><img src="./result.png" alt="" /></div>
+    </section>
+
+    <!-- end of result section-->
+
+    <!--footer-->
+    <footer>
+      <div class="footer">
+        <div class="bottomfooter">
+          <i
+            class="fa-brands fa-square-twitter fa-xl"
+            style="color: #05c1ff"
+          ></i>
+          <i class="fa-brands fa-youtube fa-xl" style="color: #db0016"></i>
+          <i class="fa-brands fa-linkedin fa-xl" style="color: #0d52c9"></i>
+          <i class="fa-brands fa-instagram fa-xl" style="color: #7b1e73"></i>
+          <i class="fa-brands fa-facebook fa-xl" style="color: #005eff"></i>
+        </div>
+        <div class="upperfooter">
+          <p>
+            <i class="fa-sharp fa-solid fa-copyright"></i> 2023 MetaAid | All
+            Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--end of footer -->
+    <script src="./result.js"></script>
+  </body>
+</html>

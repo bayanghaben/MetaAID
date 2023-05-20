@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --yellow: #fcc822;
+  --black: #333333;
+  --font-poppin: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+html {
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 3.4rem;
+}
+h2 {
+  font-size: 2.6rem;
+}
+/*body font size */
+/* p {
+  font-size: 1.4rem;
+} */
