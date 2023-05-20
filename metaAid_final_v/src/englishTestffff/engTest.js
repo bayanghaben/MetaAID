@@ -52,16 +52,20 @@ options.forEach((option) => {
 nextBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  if (!answer) return;
-  if (currIdx == engQuestions.length - 2) e.target.innerText = "submit";
-  if (answer === engQuestions[currIdx].answer) englishScore++;
+  if (!answer) return; //must answer to next question
+  //currIdx == newArrayQuations.length - 2: when click on the next of the before the last question, change next to submit on the last question
+  if (currIdx == engQuestions.length - 2) e.target.innerText = "submit"; //e.target to refer to the element in the eventlistener
+  if (answer === engQuestions[currIdx].answer) englishScore++; //if answer true increase score
 
+  // current index[9]=the tenth question
   if (currIdx === engQuestions.length - 1) {
+    //update local storage
     localStorage.setItem("englishScore", englishScore);
     currentUser.englishFlag = true;
     currentUser.englishScore = englishScore;
 
     console.log(currentUser.englishFlag);
+    //update local storage updateArr
 
     const updateArr = array.map((ele) => {
       return ele.email === currentUser.email
@@ -72,7 +76,8 @@ nextBtn.addEventListener("click", (e) => {
     localStorage.setItem("users", JSON.stringify(updateArr));
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
 
-    //popup
+    //when submit show popup score
+
     popup.classList.add("active");
     popupScore.innerText = `Your Score is : ${englishScore}`;
     clearInterval(timer);
@@ -88,7 +93,7 @@ nextBtn.addEventListener("click", (e) => {
   currIdx++;
   load();
 });
-//
+// Load new question
 const load = () => {
   question.innerText = `${currIdx + 1}. ${engQuestions[currIdx].question}`;
   labels.forEach((label, index) => {
@@ -122,10 +127,9 @@ const timer = () => {
     clearInterval(timer);
 
     localStorage.setItem("englishScore", englishScore);
+    //change and update on flag & score when time over
     currentUser.englishFlag = true;
     currentUser.englishScore = englishScore;
-    console.log(currentUser.englishFlag);
-
     const updateArr = array.map((ele) => {
       return ele.email === currentUser.email
         ? { ...ele, englishFlag: true, englishScore: englishScore }
@@ -134,10 +138,10 @@ const timer = () => {
 
     localStorage.setItem("users", JSON.stringify(updateArr));
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-
+    //Show Score pop up when time Over!
     popup.classList.add("active");
     popupScore.innerText = `Your Score is : ${englishScore}`;
-
+    //close btn of popup
     closeBtn.addEventListener(
       "click",
       () => (window.location = "../landing.html")
