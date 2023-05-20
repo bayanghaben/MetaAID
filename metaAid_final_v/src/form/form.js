@@ -1,13 +1,9 @@
+//DOM
 let fistName = document.getElementById("first-name");
-
 let lastName = document.getElementById("last-name");
-
 let educationLevel = document.getElementById("education-level");
-
 let major = document.getElementById("major");
-
 let gpa = document.getElementById("gpa");
-
 let address = document.getElementById("address");
 let logoutBtn = document.querySelector(".logout");
 let phone = document.getElementById("phone");
@@ -44,11 +40,10 @@ formBtn.addEventListener("click", (e) => {
     phone.value !== "" &&
     major.value !== ""
   ) {
-    let arrOfusers = [];
-
+    //flag
     currentUser.df = true;
-
-    (currentUser.userInfo = {
+    //to add value of current user(before was: null)
+    currentUser.userInfo = {
       //object
       first_Name: fistName.value,
       last_Name: lastName.value,
@@ -57,13 +52,12 @@ formBtn.addEventListener("click", (e) => {
       gpa: gpa.value,
       address: address.value,
       phone: phone.value,
-    }),
-      console.log(currentUser.df);
-
+    };
+    //to update on users array of each user:
     const updateArr = array.map((ele) => {
       return ele.email === currentUser.email
         ? {
-            ...ele,
+            ...ele, //just update on key of the elements
             df: true,
             userInfo: {
               //object
@@ -78,8 +72,8 @@ formBtn.addEventListener("click", (e) => {
           }
         : ele;
     });
-    console.log(updateArr);
-
+    // console.log(updateArr);
+    //local storage to send apdate on users array and current user
     localStorage.setItem("users", JSON.stringify(updateArr));
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
@@ -88,7 +82,8 @@ formBtn.addEventListener("click", (e) => {
       window.location = "../landing.html";
     }, 100);
     e.preventDefault();
-  } else {
+  } //if user doesn't fill all fields display :"please fill"
+  else {
     fill.style.display = "block";
     e.preventDefault();
   }

@@ -88,7 +88,7 @@ nextBtn.addEventListener("click", (e) => {
   currIdx++;
   load();
 });
-
+//
 const load = () => {
   question.innerText = `${currIdx + 1}. ${engQuestions[currIdx].question}`;
   labels.forEach((label, index) => {

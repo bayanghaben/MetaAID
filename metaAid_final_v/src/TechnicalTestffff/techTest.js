@@ -275,7 +275,7 @@ const ArrayOfQuestions = [
     answer: "A",
   },
 ];
-
+//DOM
 let holdTest = document.querySelector(".test");
 let holdQuestion = document.querySelector("#question");
 let answer1 = document.querySelector("#option-one");
@@ -327,14 +327,6 @@ const generate = function () {
 generate();
 
 //Delete any previous checked
-// const deselectAnswers = () => {
-//   holdAnswer.map(answer => {
-//   answer.checked = false;
-//     return answer;
-//   });
-// };
-
-//Delete any previous checked
 const deselectAnswers = () => {
   holdAnswer.forEach((answer) => (answer.checked = false));
 };
@@ -364,30 +356,27 @@ const timer = setInterval(() => {
     currentUser.techFlag = true;
     currentUser.techScore = score;
 
-    console.log(currentUser.techFlag);
-    // let techFlag = currentUser.df;
-    // Dflag = true;
-
+    //update on flag & score
     const updateArr = array.map((ele) => {
       return ele.email === currentUser.email
         ? { ...ele, techFlag: true, techScore: score }
         : ele;
     });
-    // localStorage.setItem("Df", df);
+    // localStorage update
     localStorage.setItem("users", JSON.stringify(updateArr));
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    //Show Score pop up when time Over!
     popup.classList.add("active");
     popupScore.innerText = `Your Score is : ${score}`;
-
+    //close btn of popup
     closeBtn.addEventListener(
       "click",
-
       () => (window.location = "../landing.html")
     );
-
     return;
   }
+
   holderMin.innerText = min + ":";
   holderSec.innerText = sec.toString().padStart(2, "0");
 }, 1000);
@@ -397,31 +386,29 @@ let currIdx = 0;
 btn.addEventListener("click", (e) => {
   e.preventDefault();
   getSelected();
-  //8
-  if (!answer) return;
-  if (currIdx == newArrayQuations.length - 2) e.target.innerText = "submit";
-  if (answer === newArrayQuations[currIdx].answer) score++;
-
+  //
+  if (!answer) return; //must answer to next question
+  //currIdx == newArrayQuations.length - 2: when click on the next of the before the last question, change next to submit on the last question
+  if (currIdx == newArrayQuations.length - 2) e.target.innerText = "submit"; //e.target to refer to the element
+  if (answer === newArrayQuations[currIdx].answer) score++; //if answer true increase score
+  // current index[9]=the tenth question
   if (currIdx === newArrayQuations.length - 1) {
+    //update local storage
     localStorage.setItem("techScore", score);
 
     currentUser.techFlag = true;
     currentUser.techScore = score;
-
-    console.log(currentUser.techFlag);
-    // let techFlag = currentUser.df;
-    // Dflag = true;
+    //update local storage updateArr
 
     const updateArr = array.map((ele) => {
       return ele.email === currentUser.email
         ? { ...ele, techFlag: true, techScore: score }
         : ele;
     });
-    // localStorage.setItem("Df", df);
     localStorage.setItem("users", JSON.stringify(updateArr));
 
     localStorage.setItem("currentUser", JSON.stringify(currentUser));
-
+    //when submit show popup score
     popup.classList.add("active");
     popupScore.innerText = `Your Score is : ${score}`;
     clearInterval(timer);
@@ -440,7 +427,6 @@ btn.addEventListener("click", (e) => {
 });
 
 // Load new question
-// let QusetionIndex = 0;
 const loadQusetion = () => {
   deselectAnswers();
   const currentQuiz = newArrayQuations[currIdx];
@@ -451,16 +437,3 @@ const loadQusetion = () => {
   answer4.innerText = currentQuiz.optionD;
 };
 loadQusetion();
-
-// let currentIdx=0;
-// const nextbtn= btn.addEventListener(  "click",(e) =>{
-//   const inputUser =getSelected();
-//   currentIdx++;
-//   if(currentIdx< newArrayQuations.length)
-//   loadQusetion();
-//   else{
-//   ' <button>Submit</button>'
-
-//   }
-//   e.preventDefault();
-// });
