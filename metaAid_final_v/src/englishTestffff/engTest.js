@@ -80,7 +80,7 @@ nextBtn.addEventListener("click", (e) => {
 
     popup.classList.add("active");
     popupScore.innerText = `Your Score is : ${englishScore}`;
-    clearInterval(timer);
+    clearInterval(counter);
     closeBtn.addEventListener(
       "click",
       () => (window.location = "../landing.html") //home
@@ -124,7 +124,7 @@ const timer = () => {
   }
   sec--;
   if (sec < 0 && min == 0) {
-    clearInterval(timer);
+    clearInterval(counter);
 
     localStorage.setItem("englishScore", englishScore);
     //change and update on flag & score when time over
